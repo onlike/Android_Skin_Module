@@ -10,9 +10,9 @@
     <color name="skin_white">#000</color>
     <color name="skin_black">#fff</color>
     <color name="skin_main">#bbc</color>
-    <color name="skin_text_color">#fca</color>
+    <color name="skin_text_color">#456</color>
     <color name="skin_title">#9ed</color>
-    <color name="skin_sub_title">#ffe</color>
+    <color name="skin_sub_title">#456</color>
     
     
 </resources>

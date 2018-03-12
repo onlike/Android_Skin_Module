@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 final def skin_file_output = "../lib_skin_factory/skin_output";
 
 // only reset this name when take skin file
-def skin_file_name = "SkinFactory_aa.skin"
+def skin_file_name = "SkinFactory.skin"
 
 android {
     compileSdkVersion 25
