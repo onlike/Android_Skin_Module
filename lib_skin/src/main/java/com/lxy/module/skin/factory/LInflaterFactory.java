@@ -15,6 +15,7 @@ import com.lxy.module.skin.parse.LAttrParse;
 import com.lxy.module.skin.util.LSkinUtils;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -79,6 +80,14 @@ public class LInflaterFactory
     }
 
     @Override
+    public void dynamicRemoveSkinView(Context context, View view) {
+        if (LSkinUtils.obj_isNull(view)) return;
+        
+        removeMediator(view);
+        
+    }
+
+    @Override
     public void onSkinUpdate() {
         if (!hasSkinView()) return;
 
@@ -95,6 +104,29 @@ public class LInflaterFactory
     private void addMediator(SkinViewMediator mediator){
         if (!LSkinUtils.obj_isNull(mediator)){
             mViewMediators.add(mediator);
+        }
+    }
+    
+    private synchronized void removeMediator(SkinViewMediator mediator){
+        if (!LSkinUtils.obj_isNull(mediator)){
+            mViewMediators.remove(mediator);
+        }
+    }
+    
+    private synchronized void removeMediator(View view){
+        if (!LSkinUtils.obj_isNull(view)){
+            
+            Iterator<SkinViewMediator> iterator = mViewMediators.iterator();
+            
+            while (iterator.hasNext()){
+                
+                SkinViewMediator mediator = iterator.next();
+                
+                if (LSkinUtils.obj_equals(mediator.view, view)){
+                    
+                    iterator.remove();
+                }
+            }
         }
     }
     

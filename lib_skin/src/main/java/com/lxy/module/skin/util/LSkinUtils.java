@@ -18,6 +18,14 @@ public class LSkinUtils {
         return obj == null;
     }
     
+    public static boolean obj_equals(Object a, Object b){
+        if (obj_isNull(a)){
+            return false;
+        }else {
+            return a == b;
+        }
+    }
+    
     public static boolean txt_isEmpty(String str){
         return str == null || str.length() == 0;
     }

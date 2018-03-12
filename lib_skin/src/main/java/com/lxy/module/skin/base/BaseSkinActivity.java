@@ -54,6 +54,13 @@ public class BaseSkinActivity extends AppCompatActivity{
         }
     }
     
+    protected void dynamicRemoveSkinView(View view){
+
+        if (!LSkinUtils.obj_isNull(mFactory)){
+            mFactory.dynamicRemoveSkinView(this, view);
+        }
+    }
+    
     private void initSkinFactory(){
         LayoutInflater layoutInflater = LayoutInflater.from(this);
         LayoutInflaterCompat.setFactory(layoutInflater, mFactory = new LInflaterFactory(this));
