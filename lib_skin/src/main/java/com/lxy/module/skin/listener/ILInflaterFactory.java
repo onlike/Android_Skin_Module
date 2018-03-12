@@ -18,4 +18,6 @@ public interface ILInflaterFactory extends LayoutInflaterFactory {
     void onDestroy();
 
     void dynamicAddSkinView(Context context, View view, List<DynamicAttrWrapper> attrs);
+    
+    void dynamicRemoveSkinView(Context context, View view);
 }
