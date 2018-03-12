@@ -1,0 +1,87 @@
+apply plugin: 'com.android.application'
+
+final def skin_file_output = "../lib_skin_factory/skin_output";
+
+// only reset this name when take skin file
+def skin_file_name = "SkinFactory_aa.skin"
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        applicationId "com.lxy.module.skin.factory"
+        minSdkVersion 17
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    
+    signingConfigs{
+        config {
+            storeFile file('onlike.jks')
+            storePassword '123456'
+            keyAlias 'onlike'
+            keyPassword '123456'
+        }
+    }
+    
+    buildTypes {
+        release {
+            signingConfig signingConfigs.config
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    
+    
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+gradle.projectsEvaluated {
+    assembleRelease.doLast {
+
+        def dir = new File(skin_file_output)
+        if (!dir.exists()) {
+            dir.mkdirs()
+        }
+
+        def f = new File(skin_file_output + skin_file_name)
+        if (f.exists()) {
+            f.delete()
+        }
+
+        copy {
+            from('build/outputs/apk')
+            into(skin_file_output)
+            include '**/*-release.apk'
+            rename('lib_skin_factory-release.apk', skin_file_name)
+        }
+        
+    }
+
+    assembleDebug.doLast {
+
+        def dir = new File(skin_file_output)
+        if (!dir.exists()) {
+            dir.mkdirs()
+        }
+
+        def f = new File(skin_file_output + skin_file_name)
+        if (f.exists()) {
+            f.delete()
+        }
+
+        copy {
+            from('build/outputs/apk')
+            into(skin_file_output)
+            include '**/*-debug.apk'
+            rename('lib_skin_factory-debug.apk', skin_file_name)
+        }
+
+    }
+
+}

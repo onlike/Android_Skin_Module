@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lxy.demo_applicaionskin.MainActivity">
+
+    <TextView
+        android:id="@+id/adasda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:textColor="@color/skin_text_color"
+        android:background="@color/skin_white"
+        skin:enable="true"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="@color/skin_sub_title"
+        android:background="@color/skin_main"
+        skin:enable="true"
+        android:text="change skin"
+        android:onClick="changeSkin"/>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/skin_white"
+        skin:enable="true"/>
+    
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="@color/skin_sub_title"
+        android:background="@color/skin_main"
+        skin:enable="true"
+        android:text="clear skin"
+        android:onClick="clearSkin"/>
+    
+    
+    
+</LinearLayout>

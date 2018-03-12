@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+
+
+    <color name="skin_white">#000</color>
+    <color name="skin_black">#fff</color>
+    <color name="skin_main">#bbc</color>
+    <color name="skin_text_color">#fca</color>
+    <color name="skin_title">#9ed</color>
+    <color name="skin_sub_title">#ffe</color>
+    
+    
+</resources>
