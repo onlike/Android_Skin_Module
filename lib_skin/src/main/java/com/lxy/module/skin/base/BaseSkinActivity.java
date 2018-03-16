@@ -29,22 +29,21 @@ public class BaseSkinActivity extends AppCompatActivity{
 
     @Override
     protected void onResume() {
-        
+        super.onResume();
+
         if (!LSkinUtils.obj_isNull(mFactory)){
             mFactory.onResume();
         }
-
-        super.onResume();
     }
 
     @Override
     protected void onDestroy() {
-        
+        super.onDestroy();
+
         if (!LSkinUtils.obj_isNull(mFactory)){
             mFactory.onDestroy();
         }
 
-        super.onDestroy();
     }
 
     protected void dynamicAddSkinView(View view, List<DynamicAttrWrapper> attrs){

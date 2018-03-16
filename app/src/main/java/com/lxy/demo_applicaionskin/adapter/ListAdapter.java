@@ -5,43 +5,44 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.lxy.demo_applicaionskin.R;
-import com.lxy.demo_applicaionskin.bean.TestABean;
+import com.lxy.demo_applicaionskin.bean.TestBBean;
 import com.lxy.demo_applicaionskin.listener.IDataBinding;
 import com.lxy.module.skin.util.LSkinUtils;
 
 import java.util.ArrayList;
 
 /**
- * Created by lxy on 2018/3/12.
+ * Created by lxy on 2018/3/16.
  * 
  */
-public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
+public class ListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     
-    private Context mContext ;
+    private Context mContext;
     
-    private ArrayList<TestABean> mData;
+    private ArrayList<TestBBean> mData ;
 
-    public MainAdapter(Context context) {
+
+    public ListAdapter(Context context) {
         this.mContext   = context;
         this.mData      = new ArrayList<>();
         
         setData();
     }
 
-    
-    public void addData(ArrayList<TestABean> data){
+    public void addData(ArrayList<TestBBean> data){
         if (LSkinUtils.array_isEmpty(data)) return;
-        
+
         mData.addAll(data);
         notifyDataSetChanged();
     }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View rootView = LayoutInflater.from(mContext).inflate(R.layout.item_rv_main, parent, false);
+        View rootView = LayoutInflater.from(mContext).inflate(R.layout.item_rv_list, parent, false);
         return new Holder(rootView);
     }
 
@@ -61,39 +62,38 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
             implements
                 IDataBinding 
     {
-
+        private ImageView imgThumb;
+        
         private TextView tvTitle;
-        
-        private TextView tvSubTitle;
-        
+
         Holder(View itemView) {
             super(itemView);
             
-            tvTitle     = itemView.findViewById(R.id.tv_item_main_title);
-            tvSubTitle  = itemView.findViewById(R.id.tv_item_main_sub_title);
+            imgThumb    = itemView.findViewById(R.id.img_item_list_thumb);
+            tvTitle     = itemView.findViewById(R.id.tv_item_list_title);
+            
         }
 
         @Override
         public void bindData(int position) {
-            TestABean bean = mData.get(position);
+            TestBBean bean = mData.get(position);
             
             tvTitle.setText(bean.title);
-            tvSubTitle.setText(bean.subTitle);
-            
         }
     }
 
+
     private void setData(){
 
-        ArrayList<TestABean> data = new ArrayList<>();
+        ArrayList<TestBBean> data = new ArrayList<>();
 
-        TestABean bean = null;
+        TestBBean bean = null;
 
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 25; i++) {
 
-            bean            = new TestABean();
+            bean            = new TestBBean();
             bean.title      = "标题：数据"+ (i+1);
-            bean.subTitle   = "子标题：参数"+ (i+1);
+            bean.drawable   = R.drawable.ic_launcher;
 
             data.add(bean);
         }
