@@ -1,6 +1,7 @@
 package com.lxy.demo_applicaionskin.activity;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
@@ -14,13 +15,10 @@ import android.widget.Toast;
 
 import com.lxy.demo_applicaionskin.R;
 import com.lxy.demo_applicaionskin.adapter.MainAdapter;
-import com.lxy.demo_applicaionskin.bean.TestABean;
 import com.lxy.module.skin.SkinManager;
 import com.lxy.module.skin.annotations.SkinLoadError;
 import com.lxy.module.skin.base.BaseSkinActivity;
 import com.lxy.module.skin.listener.SkinLoadCallback;
-
-import java.util.ArrayList;
 
 /**
  * Created by lxy on 2018/3/8.
@@ -62,7 +60,7 @@ public class MainActivity extends BaseSkinActivity {
 
 
     public void jumpFragment(View view) {
-
+        startActivity(new Intent(this , FragmentActivity.class));
     }
     
     @Override
@@ -108,25 +106,7 @@ public class MainActivity extends BaseSkinActivity {
     private void loge(String msg){
         Log.e("onlike","-----------"+msg);
     }
-
-    private void setData(){
-        
-        ArrayList<TestABean> data = new ArrayList<>();
-
-        TestABean bean = null;
-        
-        for (int i = 0; i < 20; i++) {
-            
-            bean            = new TestABean();
-            bean.title      = "标题：数据"+ (i+1);
-            bean.subTitle   = "子标题：参数"+ (i+1);
-            
-            data.add(bean);
-        }
-        
-        mAdapter.addData(data);
-    }
-
+    
     private void initVariable() {
         mAdapter = new MainAdapter(this);
     }
@@ -139,7 +119,6 @@ public class MainActivity extends BaseSkinActivity {
         rvCore.setLayoutManager(new LinearLayoutManager(this));
         rvCore.setAdapter(mAdapter);
         
-        setData();
     }
 
 }

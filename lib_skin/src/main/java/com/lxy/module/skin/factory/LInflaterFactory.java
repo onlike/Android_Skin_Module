@@ -30,10 +30,11 @@ public class LInflaterFactory
     
     private AppCompatActivity mActivity ;
     
-    private ArrayList<SkinViewMediator> mViewMediators = new ArrayList<>();
+    private ArrayList<SkinViewMediator> mViewMediators ;
 
     public LInflaterFactory(AppCompatActivity activity) {
-        this.mActivity = activity;
+        this.mActivity      = activity;
+        this.mViewMediators = new ArrayList<>();
     }
 
     @Override

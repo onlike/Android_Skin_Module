@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\linksus\.android\build-cache\4b84470bd2fb02adc3be9a6b20bed9395d7a15dd\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="G:\ApplicationWorkSpace\Demo_ApplicaionSkin\app\build\intermediates\pre-dexed\debug\classes_f101ec05f2c9ba7381d54ba30602aac232e15600.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\linksus\.android\build-cache\192de55e0eb48211bbabbb61b12d95aa9941fde8\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="e176fd06c2ad5b50a2f5cb4de6000a83a7cb48f5">
+        <dex dex="G:\ApplicationWorkSpace\Demo_ApplicaionSkin\app\build\intermediates\pre-dexed\debug\classes_234b36e801b20bb99654d03f6ebdc943ef88b6da.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\ApplicationWorkSpace\Demo_ApplicaionSkin\lib_skin\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="4f6d2219ca85a20dbcfbd6c04d9135459e6554ee">
+        <dex dex="G:\ApplicationWorkSpace\Demo_ApplicaionSkin\app\build\intermediates\pre-dexed\debug\classes_60339517dc9ad5f868da56e1be4dc02fe51bda8b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\linksus\.android\build-cache\90e6f5866fcb6768cfe1aebf45c4477c202db4f4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
+        <dex dex="G:\ApplicationWorkSpace\Demo_ApplicaionSkin\app\build\intermediates\pre-dexed\debug\classes_b6f0513c2fa9773da04599ad976159f43c068e4f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\linksus\.android\build-cache\ca483b258031b84ec08f88328f4fee881aea6bc5\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="G:\ApplicationWorkSpace\Demo_ApplicaionSkin\app\build\intermediates\pre-dexed\debug\classes_7435259e9303349e4fd480ed71d17adbce27b374.jar" />
+    </item>
+
+</items>

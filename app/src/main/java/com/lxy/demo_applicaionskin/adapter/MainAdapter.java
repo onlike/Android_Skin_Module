@@ -27,7 +27,10 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     public MainAdapter(Context context) {
         this.mContext   = context;
         this.mData      = new ArrayList<>();
+        
+        setData();
     }
+
     
     public void addData(ArrayList<TestABean> data){
         if (LSkinUtils.array_isEmpty(data)) return;
@@ -51,12 +54,12 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     public int getItemCount() {
         return mData.size();
     }
-    
-    private class Holder 
-                extends 
-                    RecyclerView.ViewHolder 
-                implements 
-                    IDataBinding
+
+    private class Holder
+            extends
+                RecyclerView.ViewHolder
+            implements
+                IDataBinding 
     {
 
         private TextView tvTitle;
@@ -78,5 +81,23 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
             tvSubTitle.setText(bean.subTitle);
             
         }
+    }
+
+    private void setData(){
+
+        ArrayList<TestABean> data = new ArrayList<>();
+
+        TestABean bean = null;
+
+        for (int i = 0; i < 20; i++) {
+
+            bean            = new TestABean();
+            bean.title      = "标题：数据"+ (i+1);
+            bean.subTitle   = "子标题：参数"+ (i+1);
+
+            data.add(bean);
+        }
+
+        addData(data);
     }
 }

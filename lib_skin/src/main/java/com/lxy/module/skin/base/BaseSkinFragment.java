@@ -26,12 +26,12 @@ public class BaseSkinFragment extends Fragment {
         if (rootView instanceof ViewGroup) {
 
             ViewGroup root = (ViewGroup) rootView;
-
+            
+            dynamicRemoveSkinView(root);
+            
             for (int i = 0; i < root.getChildCount(); i++) {
-                removeSkinViewOnDestroy(rootView);
+                removeSkinViewOnDestroy(root.getChildAt(i));
             }
-
-            dynamicRemoveSkinView(rootView);
 
         } else {
 
