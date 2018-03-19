@@ -1,25 +1,11 @@
 <h1>Android Skin Module</h1>
 <p>dynamic android skin module for application</p>
 <ol>
-  <li>
-    <p>support dynamic add view to skin</p>
-  </li>
-  
-  <li>
-    <p>support skin attr extanded to use for most view</p>
-  </li>
-  
-  <li>
-    <p>support customize resource parse when you want to do something</p>
-  </li>
-  
-  <li>
-    <p>support cold start skin effective</p>
-  </li>
-  
-  <li>
-    <p>force prevent fragment create skin view memory leak</p>
-  </li>
+  <li>support dynamic add view to skin.</li>  
+  <li>support skin attr extanded to use for most view.</li>
+  <li>support customize resource parse when you want to do something.</li>
+  <li>support cold start skin effective.</li>
+  <li>force prevent fragment create skin view memory leak.</li>
 </ol>
 <br/>
 
@@ -115,19 +101,9 @@
 </code>
 
 <h2>3.TODO</h2>
-<ol>
-  <li>
-    support maven center to import
-  <li>
-    
-  <li>
-    optimization skin fackory library 
-  <li>
-    
-  <li>
-    add project mind map
-  <li>   
-</ol>
+<p> a. support maven center to import.</p>
+<p>b. optimization skin fackory library.</p>
+<p>c. add project mind map.</p>
 
 
 
