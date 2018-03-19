@@ -28,7 +28,7 @@ public class MainActivity extends BaseSkinActivity {
     
     private static final int WRITE_EXTERNAL_STORAGE_REQUEST_CODE = 17;
     
-    private String skinPath = Environment.getExternalStorageDirectory() + "/SkinFactory.skin";
+    private String skinPath = Environment.getExternalStorageDirectory() +"/DCIM/TRANS"+ "/SkinFactory.skin";
     
     private MainAdapter mAdapter;
     
@@ -104,7 +104,7 @@ public class MainActivity extends BaseSkinActivity {
     }
 
     private void loge(String msg){
-        Log.e("onlike","-----------"+msg);
+        Log.e("lxy","-----------"+msg);
     }
     
     private void initVariable() {
