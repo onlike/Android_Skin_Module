@@ -101,9 +101,11 @@
 </code>
 
 <h2>3.TODO</h2>
-<p> a. support maven center to import.</p>
-<p>b. optimization skin fackory library.</p>
-<p>c. add project mind map.</p>
+<ul>
+  <li>a. support maven center to import.</li>
+  <li>b. optimization skin fackory library.</li>
+  <li>c. add project mind map.</li>
+</ul>
 
 
 
