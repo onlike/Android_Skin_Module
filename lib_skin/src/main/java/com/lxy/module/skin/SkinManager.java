@@ -24,8 +24,6 @@ import java.util.LinkedList;
  * 
  */
 public class SkinManager {
-
-    // add remove(View view) in basefragment
     
     private static Context mContext;
     
