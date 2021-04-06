@@ -58,7 +58,9 @@
 <h3> f : about support</h3>
 <p>1.library support extanded skin attr</p>
 <code>
-  SkinManager.getInstance().addSkinAttrType(String attrName, Class&lt;? extends BaseAttr&gt; cls);
+  <pre>
+      SkinManager.getInstance().addSkinAttrType(String attrName, Class&lt;? extends BaseAttr&gt; cls);
+  </pre>  
 </code>
 <p>2.library support customize resource parse</p>
 <code>
